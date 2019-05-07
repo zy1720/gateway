@@ -36,5 +36,5 @@
   Do.add('book/index1', { path: 'http://gateway.sinrun.top/js/book/index1.js' })
   Do.add('ui/slide1', { path: 'http://gateway.sinrun.top/js/book/slide1.js' })
   Do.add('ui/bubble1', { path: 'http://gateway.sinrun.top/js/book/bubble1.js' })
-  Do.add('widget/tabs', { path: 'http://gateway.sinrun.top/js/book/tabs.js' })
+  
   Do('book/index1')
