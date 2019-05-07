@@ -31,7 +31,7 @@
    window.user_id = window.user_id || ''
   define.config({
     'ui/slide1': 'Book.slide1'
-  , 'ui/bubble1': 'Book.Bubble1'
+  , 'ui/bubble': 'Book.Bubble'
   })
   Do.add('book/index', { path: 'http://gateway.sinrun.top/js/book/index.js' })
   Do.add('ui/slide1', { path: 'http://gateway.sinrun.top/js/book/slide1.js' })
