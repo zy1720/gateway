@@ -31,10 +31,10 @@
    window.user_id = window.user_id || ''
   define.config({
     'ui/slide1': 'Book.slide1'
-  , 'ui/bubble': 'Book.Bubble'
+  , 'ui/bubble1': 'Book.Bubble1'
   })
-  Do.add('book/index', { path: 'http://gateway.sinrun.top/js/book/index.js' })
+  Do.add('book/index1', { path: 'http://gateway.sinrun.top/js/book/index1.js' })
   Do.add('ui/slide1', { path: 'http://gateway.sinrun.top/js/book/slide1.js' })
-  Do.add('ui/bubble', { path: 'http://gateway.sinrun.top/js/book/bubble.js' })
+  Do.add('ui/bubble1', { path: 'http://gateway.sinrun.top/js/book/bubble1.js' })
   Do.add('widget/tabs', { path: 'http://gateway.sinrun.top/js/book/tabs.js' })
   Do('book/index1')
