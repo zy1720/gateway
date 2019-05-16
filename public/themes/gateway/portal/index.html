@@ -1292,7 +1292,7 @@
 
               </notempty>
 
-              
+
               </a>
             </div>
             <div class="info">
@@ -1352,7 +1352,23 @@
  <li class="">
     <div class="cover">
       <a  href="{:url('index/contentinfo')}?id={$vo.id}">
-        <img src="__ROOT__/upload/{$vo.img}" alt="{$vo.post_title}" class="">
+
+
+         <notempty name="vo.img">
+                    
+                <img src="__ROOT__/upload/{$vo.img}" alt="{$vo.post_title}" class="">
+
+                <else/>
+                
+                
+
+                   <img src="__ROOT__/themes/gateway/portal/images/touxiang/moren.jpg" alt="{$vo.post_title}" class="">
+
+
+              </notempty>
+
+
+       
       </a>
     </div>
     <div class="info">
@@ -1481,7 +1497,23 @@
                <dl>
                   <dt>
                     <a href="{:url('index/contentinfo')}?id={$vo.id}">
-                      <img src="__ROOT__/upload/{$vo.img}" class="m_sub_img">
+
+                       <notempty name="vo.img">
+                    
+                <img src="__ROOT__/upload/{$vo.img}" class="m_sub_img">
+
+                <else/>
+                
+                 <img src="__ROOT__/themes/gateway/portal/images/touxiang/moren.jpg" class="m_sub_img">
+
+
+
+              </notempty>
+
+
+
+
+                     
                     </a>
                   </dt>
                   <dd>
