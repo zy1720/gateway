@@ -97,7 +97,16 @@
               <div id="mainpic" class="">
 
                 <a class="nbg" href="__ROOT__/upload/{$data.img}" title="{$data.post_title}" target=_blank>
+                   <notempty name="data.img">
+
+
                   <img src="__ROOT__/upload/{$data.img}" title="点击看大图" alt="{$data.post_title}" rel="v:photo" style="width: 135px;max-height: 200px;">
+
+                <else/>
+<img src="__ROOT__/themes/gateway/portal/images/touxiang/moren.jpg"  alt="{$data.post_title}" style="width: 135px;max-height: 200px;">
+
+
+                </notempty>
                 </a>
 
               </div>
