@@ -1,0 +1,1393 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="ua-windows ua-webkit book-new-nav">
+  <head>
+    <meta charset="utf-8">
+    <meta name="google-site-verification" content="ok0wCgT20tBBgo9_zat2iAcimtN4Ftf5ccsh092Xeyw" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+    
+  <meta http-equiv="mobile-agent" content="format=xhtml; url=http://m.douban.com/book/">
+  <meta name="keywords" content="豆瓣读书,新书速递,畅销书,书评,书单"/>
+  <meta name="description" content="记录你读过的、想读和正在读的书，顺便打分，添加标签及个人附注，写评论。根据你的口味，推荐适合的书给你。" />
+  <meta name="verify-v1" content="EYARGSAVd5U+06FeTmxO8Mj28Fc/hM/9PqMfrlMo8YA=">
+  <meta property="wb:webmaster" content="7c86191e898cd20d">
+  <meta property="qc:admins" content="1520412177364752166375">
+
+  <title>gateway</title>
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="__GAT__/js/jquery.js"></script>
+    <script>
+      var Douban = {}, Book = {}
+      var Do=function(){Do.actions.push([].slice.call(arguments))};Do.ready=function(){Do.actions.push([].slice.call(arguments))},Do.add=Do.define=function(o,l){Do.mods[o]=l},Do.global=function(){Do.global.mods=Array.concat(Do.global.mods,[].slice.call(arguments))},Do.global.mods=[],Do.mods={},Do.actions=[];
+    </script>
+    
+
+<script src="__GAT__/js/define.js"></script>
+<script>
+  define.ns('Book')
+  define.config({
+    'jquery': '$'
+  , 'piwik': 'Piwik'
+  , 'mod/ga': 'Book.ga'
+  , 'mod/ajax': 'Book.ajax'
+  , 'mod/cookie': 'Book.cookie'
+  })
+
+  Do.add('mod/cookie', {
+    path: 'https://gateway.sinrun.top/js/book/cookie.js'
+  , type: 'js'
+  })
+
+  Do.add('mod/ajax', {
+    path: 'https://gateway.sinrun.top/js/book/ajax.js'
+  , requires: ['mod/cookie']
+  , type: 'js'
+  })
+
+  Do.add('mod/ga', {
+    path: 'https://gateway.sinrun.top/js/book/ga.js'
+  , type: 'js'
+  })
+</script>
+
+    
+
+
+    
+  
+  <link href="__GAT__/css/master.css" rel="stylesheet" type="text/css">
+
+  <link href="__GAT__/css/init.css" rel="stylesheet">
+  <style type="text/css"></style>
+
+  
+  <link rel="stylesheet" href="__GAT__/css/13419eb47c7c7dd7.css">
+
+   
+  </head>
+  <body>
+    
+  
+
+ 
+<link href="__GAT__/css/bundle_1.css" rel="stylesheet" type="text/css">
+	
+<div id="db-nav-book" class="nav">
+	<div class="nav-wrap">
+		<div class="nav-primary">
+			<div class="nav-logo">
+			  <a href="__ROOT__">gateway</a>
+			</div>
+			<div class="nav-search">
+				<!-- <form action="https:&#47;&#47;book.douban.com/subject_search" method="get"> -->
+          <form action="#" method="get">
+					<fieldset>
+						<legend>搜索：</legend>
+						<label for="inp-query">
+						</label>
+						<div class="inp">
+							<input id="inp-query" name="search_text" size="22" maxlength="60" placeholder="书名、作者、ISBN" value="">
+						</div>
+						<div class="inp-btn"><input type="submit" value="搜索"></div>
+						<input type="hidden" name="cat" value="1001" />
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+  <div id="wrapper">
+    
+  <!-- douban ad begin -->
+  <div id="dale_book_home_top_super_banner" class="ad-placeholder" style="margin: -18px 0 0;">
+  </div>
+  <!-- douban ad end -->
+
+    
+  <div id="content">
+    
+
+    <div class="grid-16-8 clearfix">
+      
+      <div class="article">
+  
+  <div class="section books-express ">
+    <div class="hd">
+      
+  <h2 class=''>
+  <span class="" id='ajaxdemo'>在读书籍</span>
+
+   
+   
+     <!--  <span class="link-more">
+        <a class="" href="#"
+          >更多»</a>
+      </span> -->
+  </h2>
+
+      <div class="slide-controls">
+        <ol class="slide-dots">
+
+           <for start='0' end='$n' comparsion='eqt' >
+           <li><a data-index="2" href="#" class=""></a></li>
+          
+          </for>
+  
+
+         
+        <!--   <li><a data-index="2" href="#" class=""></a></li>
+          <li><a data-index="3" href="#" class=""></a></li> -->
+          
+        </ol>
+        <div class="slide-btns">
+          <a href="#" class="prev">&#8249;</a>
+          <a href="#" class="next">&#8250;</a>
+        </div>
+      </div>
+    </div>
+    <div class="bd">
+      <div class="carousel">
+        <div class="slide-list">
+
+        
+<notempty name="data1">
+
+            <ul class="list-col list-col5 list-express slide-item">
+       
+          
+   <foreach name="data1" item="vo">
+          <li class="">
+            <notempty name="vo.post_excerpt">
+            <div class="cover">
+                <else/>
+                <div class="cover1">
+                </notempty>
+
+              <a href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">
+                <img src="__ROOT__/upload/{$vo.img}" class="" width="115px" height="172px" alt="{$vo.post_title}">
+              </a>
+            </div>
+            <div class="info">
+              <div class="title">
+                <a class="" href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">{$vo.post_title}</a>
+              </div>
+              <div class="author">
+                {$vo.author_name}{$vo.id}
+              </div>
+
+              <notempty name="vo.post_excerpt">
+              <div class="more-meta">
+               
+                    {$vo.post_excerpt}
+              </div>
+
+              </notempty>
+
+
+            </div>
+          </li>
+
+
+        </foreach>  
+
+            </ul>
+          
+        </notempty> 
+  
+  
+   
+
+<notempty name="data2">
+
+            <ul class="list-col list-col5 list-express slide-item">
+       
+          
+   <foreach name="data2" item="vo">
+                <li class="">
+            <notempty name="vo.post_excerpt">
+            <div class="cover">
+                <else/>
+                <div class="cover1">
+                </notempty>
+
+              <a href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">
+                <img src="__ROOT__/upload/{$vo.img}" class="" width="115px" height="172px" alt="{$vo.post_title}">
+              </a>
+            </div>
+            <div class="info">
+              <div class="title">
+                <a class="" href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">{$vo.post_title}</a>
+              </div>
+              <div class="author">
+                {$vo.author_name}{$vo.id}
+              </div>
+
+              <notempty name="vo.post_excerpt">
+              <div class="more-meta">
+               
+                    {$vo.post_excerpt}
+              </div>
+
+              </notempty>
+
+
+            </div>
+          </li>
+        </foreach>  
+
+            </ul>
+          
+        </notempty> 
+
+
+  <notempty name="data3">
+
+            <ul class="list-col list-col5 list-express slide-item">
+       
+          
+   <foreach name="data3" item="vo">
+           <li class="">
+            <notempty name="vo.post_excerpt">
+            <div class="cover">
+                <else/>
+                <div class="cover1">
+                </notempty>
+
+              <a href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">
+                <img src="__ROOT__/upload/{$vo.img}" class="" width="115px" height="172px" alt="{$vo.post_title}">
+              </a>
+            </div>
+            <div class="info">
+              <div class="title">
+                <a class="" href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">{$vo.post_title}</a>
+              </div>
+              <div class="author">
+                {$vo.author_name}{$vo.id}
+              </div>
+
+              <notempty name="vo.post_excerpt">
+              <div class="more-meta">
+               
+                    {$vo.post_excerpt}
+              </div>
+
+              </notempty>
+
+
+            </div>
+          </li>
+        </foreach>  
+
+            </ul>
+          
+        </notempty> 
+
+
+
+        <notempty name="data4">
+
+            <ul class="list-col list-col5 list-express slide-item">
+       
+          
+   <foreach name="data4" item="vo">
+           <li class="">
+            <notempty name="vo.post_excerpt">
+            <div class="cover">
+                <else/>
+                <div class="cover1">
+                </notempty>
+
+              <a href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">
+                <img src="__ROOT__/upload/{$vo.img}" class="" width="115px" height="172px" alt="{$vo.post_title}">
+              </a>
+            </div>
+            <div class="info">
+              <div class="title">
+                <a class="" href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">{$vo.post_title}</a>
+              </div>
+              <div class="author">
+                {$vo.author_name}{$vo.id}
+              </div>
+
+              <notempty name="vo.post_excerpt">
+              <div class="more-meta">
+               
+                    {$vo.post_excerpt}
+              </div>
+
+              </notempty>
+
+
+            </div>
+          </li>
+          
+        </foreach>  
+
+            </ul>
+          
+        </notempty> 
+
+
+
+
+   <notempty name="data5">
+
+            <ul class="list-col list-col5 list-express slide-item">
+       
+          
+   <foreach name="data5" item="vo">
+          <li class="">
+            <notempty name="vo.post_excerpt">
+            <div class="cover">
+                <else/>
+                <div class="cover1">
+                </notempty>
+
+              <a href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">
+                <img src="__ROOT__/upload/{$vo.img}" class="" width="115px" height="172px" alt="{$vo.post_title}">
+              </a>
+            </div>
+            <div class="info">
+              <div class="title">
+                <a class="" href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">{$vo.post_title}</a>
+              </div>
+              <div class="author">
+                {$vo.author_name}{$vo.id}
+              </div>
+
+              <notempty name="vo.post_excerpt">
+              <div class="more-meta">
+               
+                    {$vo.post_excerpt}
+              </div>
+
+              </notempty>
+
+
+            </div>
+          </li>
+        </foreach>  
+
+            </ul>
+          
+        </notempty> 
+ 
+
+
+ <notempty name="data6">
+
+            <ul class="list-col list-col5 list-express slide-item">
+       
+          
+   <foreach name="data6" item="vo">
+           <li class="">
+            <notempty name="vo.post_excerpt">
+            <div class="cover">
+                <else/>
+                <div class="cover1">
+                </notempty>
+
+              <a href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">
+                <img src="__ROOT__/upload/{$vo.img}" class="" width="115px" height="172px" alt="{$vo.post_title}">
+              </a>
+            </div>
+            <div class="info">
+              <div class="title">
+                <a class="" href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">{$vo.post_title}</a>
+              </div>
+              <div class="author">
+                {$vo.author_name}{$vo.id}
+              </div>
+
+              <notempty name="vo.post_excerpt">
+              <div class="more-meta">
+               
+                    {$vo.post_excerpt}
+              </div>
+
+              </notempty>
+
+
+            </div>
+          </li>
+        </foreach>  
+
+            </ul>
+          
+        </notempty> 
+
+
+
+
+<notempty name="data7">
+
+            <ul class="list-col list-col5 list-express slide-item">
+       
+          
+   <foreach name="data7" item="vo">
+           <li class="">
+            <notempty name="vo.post_excerpt">
+            <div class="cover">
+                <else/>
+                <div class="cover1">
+                </notempty>
+
+              <a href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">
+                <img src="__ROOT__/upload/{$vo.img}" class="" width="115px" height="172px" alt="{$vo.post_title}">
+              </a>
+            </div>
+            <div class="info">
+              <div class="title">
+                <a class="" href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">{$vo.post_title}</a>
+              </div>
+              <div class="author">
+                {$vo.author_name}{$vo.id}
+              </div>
+
+              <notempty name="vo.post_excerpt">
+              <div class="more-meta">
+               
+                    {$vo.post_excerpt}
+              </div>
+
+              </notempty>
+
+
+            </div>
+          </li>
+        </foreach>  
+
+            </ul>
+          
+        </notempty> 
+
+
+
+<notempty name="data8">
+
+            <ul class="list-col list-col5 list-express slide-item">
+       
+          
+   <foreach name="data8" item="vo">
+            <li class="">
+            <notempty name="vo.post_excerpt">
+            <div class="cover">
+                <else/>
+                <div class="cover1">
+                </notempty>
+
+              <a href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">
+                <img src="__ROOT__/upload/{$vo.img}" class="" width="115px" height="172px" alt="{$vo.post_title}">
+              </a>
+            </div>
+            <div class="info">
+              <div class="title">
+                <a class="" href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">{$vo.post_title}</a>
+              </div>
+              <div class="author">
+                {$vo.author_name}{$vo.id}
+              </div>
+
+              <notempty name="vo.post_excerpt">
+              <div class="more-meta">
+               
+                    {$vo.post_excerpt}
+              </div>
+
+              </notempty>
+
+
+            </div>
+          </li>
+        </foreach>  
+
+            </ul>
+          
+        </notempty> 
+
+      
+      <notempty name="data9">
+
+            <ul class="list-col list-col5 list-express slide-item">
+       
+          
+   <foreach name="data9" item="vo">
+           <li class="">
+            <notempty name="vo.post_excerpt">
+            <div class="cover">
+                <else/>
+                <div class="cover1">
+                </notempty>
+
+              <a href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">
+                <img src="__ROOT__/upload/{$vo.img}" class="" width="115px" height="172px" alt="{$vo.post_title}">
+              </a>
+            </div>
+            <div class="info">
+              <div class="title">
+                <a class="" href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">{$vo.post_title}</a>
+              </div>
+              <div class="author">
+                {$vo.author_name}{$vo.id}
+              </div>
+
+              <notempty name="vo.post_excerpt">
+              <div class="more-meta">
+               
+                    {$vo.post_excerpt}
+              </div>
+
+              </notempty>
+
+
+            </div>
+          </li>
+        </foreach>  
+
+            </ul>
+          
+        </notempty> 
+
+
+
+
+
+        <notempty name="data10">
+
+            <ul class="list-col list-col5 list-express slide-item">
+       
+          
+   <foreach name="data10" item="vo">
+            <li class="">
+            <notempty name="vo.post_excerpt">
+            <div class="cover">
+                <else/>
+                <div class="cover1">
+                </notempty>
+
+              <a href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">
+                <img src="__ROOT__/upload/{$vo.img}" class="" width="115px" height="172px" alt="{$vo.post_title}">
+              </a>
+            </div>
+            <div class="info">
+              <div class="title">
+                <a class="" href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">{$vo.post_title}</a>
+              </div>
+              <div class="author">
+                {$vo.author_name}{$vo.id}
+              </div>
+
+              <notempty name="vo.post_excerpt">
+              <div class="more-meta">
+               
+                    {$vo.post_excerpt}
+              </div>
+
+              </notempty>
+
+
+            </div>
+          </li>
+        </foreach>  
+
+            </ul>
+          
+        </notempty> 
+
+
+
+
+
+<notempty name="data11">
+
+            <ul class="list-col list-col5 list-express slide-item">
+       
+          
+   <foreach name="data11" item="vo">
+           <li class="">
+            <notempty name="vo.post_excerpt">
+            <div class="cover">
+                <else/>
+                <div class="cover1">
+                </notempty>
+
+              <a href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">
+                <img src="__ROOT__/upload/{$vo.img}" class="" width="115px" height="172px" alt="{$vo.post_title}">
+              </a>
+            </div>
+            <div class="info">
+              <div class="title">
+                <a class="" href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">{$vo.post_title}</a>
+              </div>
+              <div class="author">
+                {$vo.author_name}{$vo.id}
+              </div>
+
+              <notempty name="vo.post_excerpt">
+              <div class="more-meta">
+               
+                    {$vo.post_excerpt}
+              </div>
+
+              </notempty>
+
+
+            </div>
+          </li>
+        </foreach>  
+
+            </ul>
+          
+        </notempty> 
+
+
+
+
+<notempty name="data12">
+
+            <ul class="list-col list-col5 list-express slide-item">
+       
+          
+   <foreach name="data12" item="vo">
+           <li class="">
+            <notempty name="vo.post_excerpt">
+            <div class="cover">
+                <else/>
+                <div class="cover1">
+                </notempty>
+
+              <a href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">
+                <img src="__ROOT__/upload/{$vo.img}" class="" width="115px" height="172px" alt="{$vo.post_title}">
+              </a>
+            </div>
+            <div class="info">
+              <div class="title">
+                <a class="" href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">{$vo.post_title}</a>
+              </div>
+              <div class="author">
+                {$vo.author_name}{$vo.id}
+              </div>
+
+              <notempty name="vo.post_excerpt">
+              <div class="more-meta">
+               
+                    {$vo.post_excerpt}
+              </div>
+
+              </notempty>
+
+
+            </div>
+          </li>
+        </foreach>  
+
+            </ul>
+          
+        </notempty> 
+
+
+
+
+
+
+<notempty name="data13">
+
+            <ul class="list-col list-col5 list-express slide-item">
+       
+          
+   <foreach name="data13" item="vo">
+           <li class="">
+            <notempty name="vo.post_excerpt">
+            <div class="cover">
+                <else/>
+                <div class="cover1">
+                </notempty>
+
+              <a href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">
+                <img src="__ROOT__/upload/{$vo.img}" class="" width="115px" height="172px" alt="{$vo.post_title}">
+              </a>
+            </div>
+            <div class="info">
+              <div class="title">
+                <a class="" href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">{$vo.post_title}</a>
+              </div>
+              <div class="author">
+                {$vo.author_name}{$vo.id}
+              </div>
+
+              <notempty name="vo.post_excerpt">
+              <div class="more-meta">
+               
+                    {$vo.post_excerpt}
+              </div>
+
+              </notempty>
+
+
+            </div>
+          </li>
+        </foreach>  
+
+            </ul>
+          
+        </notempty> 
+
+
+
+<notempty name="data14">
+
+            <ul class="list-col list-col5 list-express slide-item">
+       
+          
+   <foreach name="data14" item="vo">
+           <li class="">
+            <notempty name="vo.post_excerpt">
+            <div class="cover">
+                <else/>
+                <div class="cover1">
+                </notempty>
+
+              <a href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">
+                <img src="__ROOT__/upload/{$vo.img}" class="" width="115px" height="172px" alt="{$vo.post_title}">
+              </a>
+            </div>
+            <div class="info">
+              <div class="title">
+                <a class="" href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">{$vo.post_title}</a>
+              </div>
+              <div class="author">
+                {$vo.author_name}{$vo.id}
+              </div>
+
+              <notempty name="vo.post_excerpt">
+              <div class="more-meta">
+               
+                    {$vo.post_excerpt}
+              </div>
+
+              </notempty>
+
+
+            </div>
+          </li>
+        </foreach>  
+
+            </ul>
+          
+        </notempty> 
+
+<notempty name="data15">
+
+            <ul class="list-col list-col5 list-express slide-item">
+       
+          
+   <foreach name="data15" item="vo">
+           <li class="">
+            <notempty name="vo.post_excerpt">
+            <div class="cover">
+                <else/>
+                <div class="cover1">
+                </notempty>
+
+              <a href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">
+                <img src="__ROOT__/upload/{$vo.img}" class="" width="115px" height="172px" alt="{$vo.post_title}">
+              </a>
+            </div>
+            <div class="info">
+              <div class="title">
+                <a class="" href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">{$vo.post_title}</a>
+              </div>
+              <div class="author">
+                {$vo.author_name}{$vo.id}
+              </div>
+
+              <notempty name="vo.post_excerpt">
+              <div class="more-meta">
+               
+                    {$vo.post_excerpt}
+              </div>
+
+              </notempty>
+
+
+            </div>
+          </li>
+        </foreach>  
+
+            </ul>
+          
+        </notempty> 
+
+
+
+
+
+
+
+<notempty name="data16">
+
+            <ul class="list-col list-col5 list-express slide-item">
+       
+          
+   <foreach name="data16" item="vo">
+           <li class="">
+            <notempty name="vo.post_excerpt">
+            <div class="cover">
+                <else/>
+                <div class="cover1">
+                </notempty>
+
+              <a href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">
+                <img src="__ROOT__/upload/{$vo.img}" class="" width="115px" height="172px" alt="{$vo.post_title}">
+              </a>
+            </div>
+            <div class="info">
+              <div class="title">
+                <a class="" href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">{$vo.post_title}</a>
+              </div>
+              <div class="author">
+                {$vo.author_name}{$vo.id}
+              </div>
+
+              <notempty name="vo.post_excerpt">
+              <div class="more-meta">
+               
+                    {$vo.post_excerpt}
+              </div>
+
+              </notempty>
+
+
+            </div>
+          </li>
+        </foreach>  
+
+            </ul>
+          
+        </notempty> 
+
+
+
+
+
+
+
+<notempty name="data17">
+
+            <ul class="list-col list-col5 list-express slide-item">
+       
+          
+   <foreach name="data17" item="vo">
+           <li class="">
+            <notempty name="vo.post_excerpt">
+            <div class="cover">
+                <else/>
+                <div class="cover1">
+                </notempty>
+
+              <a href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">
+                <img src="__ROOT__/upload/{$vo.img}" class="" width="115px" height="172px" alt="{$vo.post_title}">
+              </a>
+            </div>
+            <div class="info">
+              <div class="title">
+                <a class="" href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">{$vo.post_title}</a>
+              </div>
+              <div class="author">
+                {$vo.author_name}{$vo.id}
+              </div>
+
+              <notempty name="vo.post_excerpt">
+              <div class="more-meta">
+               
+                    {$vo.post_excerpt}
+              </div>
+
+              </notempty>
+
+
+            </div>
+          </li>
+        </foreach>  
+
+            </ul>
+          
+        </notempty> 
+
+
+
+
+<notempty name="data18">
+
+            <ul class="list-col list-col5 list-express slide-item">
+       
+          
+   <foreach name="data18" item="vo">
+           <li class="">
+            <notempty name="vo.post_excerpt">
+            <div class="cover">
+                <else/>
+                <div class="cover1">
+                </notempty>
+
+              <a href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">
+                <img src="__ROOT__/upload/{$vo.img}" class="" width="115px" height="172px" alt="{$vo.post_title}">
+              </a>
+            </div>
+            <div class="info">
+              <div class="title">
+                <a class="" href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">{$vo.post_title}</a>
+              </div>
+              <div class="author">
+                {$vo.author_name}{$vo.id}
+              </div>
+
+              <notempty name="vo.post_excerpt">
+              <div class="more-meta">
+               
+                    {$vo.post_excerpt}
+              </div>
+
+              </notempty>
+
+
+            </div>
+          </li>
+        </foreach>  
+
+            </ul>
+          
+        </notempty> 
+
+
+
+
+
+<notempty name="data19">
+
+            <ul class="list-col list-col5 list-express slide-item">
+       
+          
+   <foreach name="data19" item="vo">
+            <li class="">
+            <notempty name="vo.post_excerpt">
+            <div class="cover">
+                <else/>
+                <div class="cover1">
+                </notempty>
+
+              <a href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">
+                <img src="__ROOT__/upload/{$vo.img}" class="" width="115px" height="172px" alt="{$vo.post_title}">
+              </a>
+            </div>
+            <div class="info">
+              <div class="title">
+                <a class="" href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">{$vo.post_title}</a>
+              </div>
+              <div class="author">
+                {$vo.author_name}{$vo.id}
+              </div>
+
+              <notempty name="vo.post_excerpt">
+              <div class="more-meta">
+               
+                    {$vo.post_excerpt}
+              </div>
+
+              </notempty>
+
+
+            </div>
+          </li>
+        </foreach>  
+
+            </ul>
+          
+        </notempty> 
+
+
+
+
+
+<notempty name="data20">
+
+            <ul class="list-col list-col5 list-express slide-item">
+       
+          
+   <foreach name="data20" item="vo">
+           <li class="">
+            <notempty name="vo.post_excerpt">
+            <div class="cover">
+                <else/>
+                <div class="cover1">
+                </notempty>
+
+              <a href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">
+                <img src="__ROOT__/upload/{$vo.img}" class="" width="115px" height="172px" alt="{$vo.post_title}">
+              </a>
+            </div>
+            <div class="info">
+              <div class="title">
+                <a class="" href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">{$vo.post_title}</a>
+              </div>
+              <div class="author">
+                {$vo.author_name}{$vo.id}
+              </div>
+
+              <notempty name="vo.post_excerpt">
+              <div class="more-meta">
+               
+                    {$vo.post_excerpt}
+              </div>
+
+              </notempty>
+
+
+            </div>
+          </li>
+        </foreach>  
+
+            </ul>
+          
+        </notempty> 
+
+
+
+
+<notempty name="data21">
+
+            <ul class="list-col list-col5 list-express slide-item">
+       
+          
+   <foreach name="data21" item="vo">
+            <li class="">
+            <notempty name="vo.post_excerpt">
+            <div class="cover">
+                <else/>
+                <div class="cover1">
+                </notempty>
+
+              <a href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">
+                <img src="__ROOT__/upload/{$vo.img}" class="" width="115px" height="172px" alt="{$vo.post_title}">
+              </a>
+            </div>
+            <div class="info">
+              <div class="title">
+                <a class="" href="{:url('index/contentinfo')}?id={$vo.id}" title="{$vo.post_title}">{$vo.post_title}</a>
+              </div>
+              <div class="author">
+                {$vo.author_name}{$vo.id}
+              </div>
+
+              <notempty name="vo.post_excerpt">
+              <div class="more-meta">
+               
+                    {$vo.post_excerpt}
+              </div>
+
+              </notempty>
+
+
+            </div>
+          </li>
+        </foreach>  
+
+            </ul>
+          
+        </notempty> 
+
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- 轮播结束 -->
+
+  <!-- douban ad begin -->
+  <div id="dale_book_home_left_top" class="ad-placeholder" style="margin:-30px 0 30px;"></div>
+  <!-- douban app end -->
+
+
+    
+
+  <div class="section popular-books">
+    <div class="hd">
+      <h2>
+        <span>待读书籍</span>
+      </h2>
+    </div>
+    <div class="bd">
+      <ul class="list-col list-col2 list-summary s"
+        data-dstat-areaid="61" data-dstat-mode="click,expose">
+              
+  
+
+<notempty name="daidu">
+              <foreach name="daidu" item="vo">
+
+
+ <li class="">
+    <div class="cover">
+      <a  href="{:url('index/contentinfo')}?id={$vo.id}">
+        <img src="__ROOT__/upload/{$vo.img}" alt="{$vo.post_title}" class="">
+      </a>
+    </div>
+    <div class="info">
+      <h4 class="title">
+        <a  href="{:url('index/contentinfo')}?id={$vo.id}" class="">{$vo.post_title}</a>
+      </h4>
+      <p class="entry-star-small">
+        <span class="average-rating">
+          &nbsp;
+        </span>
+      </p>
+      <p class="author">
+        作者：{$vo.author_name}
+      </p>
+       <span class="average-rating">
+          &nbsp;
+        </span>
+      <p class="book-list-classification">
+       {$vo.post_keywords}
+      </p>
+      
+        <!-- <p class="reviews">
+          时间不是礼物，是刻度
+          (<a onclick="moreurl(this, {from:'pop_fiction'})" href="#">铲铲评论</a>)
+        </p> -->
+    </div>
+  </li>
+
+             </foreach>   
+  </notempty> 
+
+  
+  
+
+
+      </ul>
+    </div>
+  </div>
+
+
+
+
+ 
+
+</div>
+      <div class="aside">
+        
+ 
+ <style>
+      .item img {
+        width:31px;
+        height:31px;
+        border-radius: 50%;
+
+      }
+
+      .book-info a {
+          /*margin-right:10px;*/
+          position: relative;
+        
+          top: -10px;
+      }
+
+    </style>
+    
+<div class="section weekly-top">
+    <div class="hd">
+        <h2>老师介绍</h2>
+    </div>
+    <div class="bd">
+     
+            <ul class="list list-ranking">
+               
+              <notempty name="teacher">
+                   <foreach name="teacher" item="vo">
+                          <li class="item">
+                              <span class="rank-num">{$vo.num}.</span>
+                              
+                              <div class="book-info">
+                                <notempty name="vo.img">
+                                  <img src="__ROOT__/upload/{$vo.img}"  alt="{$vo.teacher_name}">
+                                    
+                                    <elseif condition="$vo.sex == 1"/>
+
+  <img src="__ROOT__/themes/gateway/portal/images/touxiang/nan.jpg"  alt="{$vo.teacher_name}">
+
+                                    <else/>
+  <img src="__ROOT__/themes/gateway/portal/images/touxiang/nv.jpg"  alt="{$vo.teacher_name}">
+                                </notempty>
+                                  <a href="{:url('index/teacher')}?id={$vo.id}" class="name" target="_blank">{$vo.teacher_name}</a>
+                                  <div class="author">{$vo.teacher_name}</div>
+                              </div>
+                       
+                          </li>
+                  </foreach>
+              </notempty>
+            </ul>
+         
+    </div>
+</div>
+
+
+
+  <div class="block5">
+    
+    
+  <h2 class=''>
+    <span class="">已读书籍</span>
+      <span class="link-more">
+        <a class="" href="#"
+          >更多»</a>
+      </span>
+  </h2>
+
+    
+    <div class="content clearfix s" id="book_rec" data-dstat-areaid="58" data-dstat-mode="click,expose">
+
+
+
+        <notempty name="yidu">
+              <foreach name="yidu" item="vo">
+
+  
+
+
+               <dl>
+                  <dt>
+                    <a href="{:url('index/contentinfo')}?id={$vo.id}">
+                      <img src="__ROOT__/upload/{$vo.img}" class="m_sub_img">
+                    </a>
+                  </dt>
+                  <dd>
+                   
+                      
+                    
+                    <p class="extra-info">
+                       <a href="{:url('index/contentinfo')}?id={$vo.id}">
+                      {$vo.post_title}
+               </a>
+                    </p>
+                   
+                  </dd>
+                </dl>
+</foreach>
+</notempty>
+   
+
+      <div class="clearfix rr" style="width:100%"></div>
+
+    </div>
+  </div>
+
+  
+  <div class="contact">
+    <h2>联系我们</h2>
+    <ul class="apply-links">
+      <li>
+        合作联系：<img src="__GAT__/images/lg_book_a11_1.png" />
+
+
+      </li>
+    </ul>
+  </div>
+
+
+ 
+ 
+      </div>
+    </div>
+  </div>
+
+    
+  <div id="footer">
+    
+<span id="icp" class="fleft gray-link">
+    &copy; 2005－2019 XXX.com, all rights reserved XXX科技有限公司
+</span>
+
+
+
+    <script src="__GAT__/js/init.js"
+      data-cfg-corelib="https://gateway.sinrun.top/js/book/jquery.js">
+    </script>
+  </div>
+
+  </div>
+    
+  
+
+<script>
+  window.user_id = window.user_id || ''
+  define.config({
+    'ui/slide': 'Book.slide'
+  , 'ui/bubble': 'Book.Bubble'
+  })
+  Do.add('book/index', { path: 'https://gateway.sinrun.top/js/book/index.js' })
+  Do.add('ui/slide', { path: 'https://gateway.sinrun.top/js/book/slide.js' })
+  Do.add('ui/bubble', { path: 'https://gateway.sinrun.top/js/book/bubble.js' })
+  Do.add('widget/tabs', { path: 'https://gateway.sinrun.top/js/book/tabs.js' })
+  Do('book/index')
+</script>
+  <!-- douban ad begin -->
+  
+<script type="text/javascript">
+
+$('#ajaxdemo').on('click', function () {
+
+  $.get("{:url('index/edit')}",{id:1,cid:2},function(m){
+                    
+                  alert(m)
+  },"json");
+
+
+});
+
+
+</script>>
+
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

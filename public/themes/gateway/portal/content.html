@@ -1,0 +1,604 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="ua-windows ua-webkit book-new-nav">
+  <head>
+    <meta charset="utf-8">
+    <meta name="google-site-verification" content="ok0wCgT20tBBgo9_zat2iAcimtN4Ftf5ccsh092Xeyw" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+    
+  <meta http-equiv="mobile-agent" content="format=xhtml; url=http://m.douban.com/book/">
+  <meta name="keywords" content="豆瓣读书,新书速递,畅销书,书评,书单"/>
+  <meta name="description" content="记录你读过的、想读和正在读的书，顺便打分，添加标签及个人附注，写评论。根据你的口味，推荐适合的书给你。" />
+  <meta name="verify-v1" content="EYARGSAVd5U+06FeTmxO8Mj28Fc/hM/9PqMfrlMo8YA=">
+  <meta property="wb:webmaster" content="7c86191e898cd20d">
+  <meta property="qc:admins" content="1520412177364752166375">
+
+  <title>gateway</title>
+
+  <link href="__GAT__/css/master.css" rel="stylesheet" type="text/css">
+
+
+  <link href="__GAT__/css/bundle_1.css" rel="stylesheet" type="text/css">
+  
+ <link rel="stylesheet" href="__GAT__/css3/subject.css">
+  
+  <link rel="stylesheet" type="text/css" href="__GAT__/css3/verify.css">
+<script type="text/javascript" src="__GAT__/js3/jquery.min.js"></script>
+<script type="text/javascript" src="__GAT__/js3/verify.js" ></script>
+
+
+  </head>
+  
+
+  <body>
+
+     <div id="db-nav-book" class="nav">
+  <div class="nav-wrap">
+    <div class="nav-primary">
+      <div class="nav-logo">
+        <a href="index.html">gateway</a>
+      </div>
+      <div class="nav-search">
+        <!-- <form action="https:&#47;&#47;book.douban.com/subject_search" method="get"> -->
+          <form action="#" method="get">
+          <fieldset>
+            <legend>搜索：</legend>
+            <label for="inp-query">
+            </label>
+            <div class="inp">
+              <input id="inp-query" name="search_text" size="22" maxlength="60" placeholder="书名、作者、ISBN" value="">
+            </div>
+            <div class="inp-btn"><input type="submit" value="搜索"></div>
+            <input type="hidden" name="cat" value="1001" />
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .t-style{
+    font-size: 40px;
+  }
+
+  .info {
+    font-size: 16px;
+  }
+
+  .intro{
+    font-size: 15px;
+  }
+</style>
+<div id="wrapper">
+        
+ 
+  <h1>
+    <span class="t-style">{$data.post_title}</span>
+    <div class="clear"></div>
+  </h1>
+
+        
+  <div id="content">
+    
+    <div class="grid-16-8 clearfix">
+      
+      <div class="article">
+      
+        <div class="indent">
+        
+          <div class="subjectwrap clearfix">
+
+            <div class="subject clearfix">
+            
+              <div id="mainpic" class="">
+
+                <a class="nbg" href="__ROOT__/upload/{$data.img}" title="{$data.post_title}" target=_blank>
+                  <img src="__ROOT__/upload/{$data.img}" title="点击看大图" alt="{$data.post_title}" rel="v:photo" style="width: 135px;max-height: 200px;">
+                </a>
+
+              </div>
+
+              <div id="info" class="info">
+
+            
+                  <span class="pl"> 作者</span>:
+              
+                  {$data.author_name}
+                <br/><br/><br/><br/>
+
+                <span class="pl">上架时间:</span> {$data.published_time|date='Y-m-d',###}  
+
+
+               <!--  <span class="pl">出品方:</span>&nbsp;<a href="javascript:;">博集天卷</a><br>
+                <span class="pl">出版年:</span> 2019-1<br/>
+                <span class="pl">页数:</span> 344<br/>
+                <span class="pl">定价:</span> 52.00元<br/>
+                <span class="pl">装帧:</span> 平装<br/>
+                <span class="pl">ISBN:</span> 9787540488475<br/> -->
+
+
+                <!-- <span class="pl">出版社:</span> 湖南文艺出版社<br/>
+                <span class="pl">出品方:</span>&nbsp;<a href="javascript:;">博集天卷</a><br>
+                <span class="pl">出版年:</span> 2019-1<br/>
+                <span class="pl">页数:</span> 344<br/>
+                <span class="pl">定价:</span> 52.00元<br/>
+                <span class="pl">装帧:</span> 平装<br/>
+                <span class="pl">ISBN:</span> 9787540488475<br/> -->
+
+              </div>
+
+            </div>
+            
+          </div>
+  
+          <!-- <div id="interest_sect_level" class="clearfix">
+            <a href="#" rel="nofollow" class="j a_show_login colbutt ll" name="pbtn-30414743-wish">
+              <span>
+        
+              <form method="POST" action="" class="miniform">
+                <input type="submit" class="minisubmit j  " value="下载地址" title="" />
+              </form>
+
+              </span> 
+            </a>
+
+          </div> -->
+        </div>
+
+
+        <br clear="all">
+        <div id="collect_form_30414743"></div>
+        <div class="related_info">
+  
+          <h2>
+            <span class="">内容简介</span>&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+          </h2>
+        
+          <div class="indent" id="link-report">
+    
+           
+           
+              {$data.content}
+          </div>
+          
+          <div class="show-hide">
+             <p><a href="javascript:void(0)" id="demoBtn" class="j a_show_full">(展开全部)</a></p>
+             <p><a href="javascript:void(0)" id="Btnsshow" style="display: none" class="j a_show_full">(收起)</a>
+
+          </div>
+         
+          </p>
+
+          <div class="online-read">
+        
+            <notempty name="data.download_url">
+
+              
+            <a href="javascript:void(0)" id="show" onclick="show()" >下载地址</a>
+
+            
+    <!--  <div><a href="javascript:void(0)" id="show" onclick="show()">点击打开弹出层！</div> -->
+
+
+
+          </notempty>
+            
+
+
+          </div>
+            <div id='urlshow' val=''>
+              
+
+            </div>  
+
+          
+          
+         
+
+
+           <div id="Idiv" style="display:none;">
+
+                  <a href="javascript:void(0)" onclick="closeDiv()" style="color:red">点击关闭</a>
+                  
+                  <div id="mpanel5" style="margin-top:50px;">
+                    </div>
+             </div>
+
+
+
+
+          <script type="text/javascript">
+  
+              
+                $('#mpanel5').pointsVerify({
+                        defaultNum : 4, //默认的文字数量
+                        checkNum : 2, //校对的文字数量
+                        vSpace : 5, //间隔
+                        imgName : ['1.jpg', '2.jpg'],
+                        imgSize : {
+                          width: '600px',
+                          height: '200px',
+                        },
+                        barSize : {
+                          width : '600px',
+                          height : '40px',
+                        },
+                        ready : function() {
+                        },
+                        success : function() {
+                           // alert('恭喜您验证成功！');
+
+                                $("#urlshow").attr("val",1);
+
+                               
+
+                               $.get("{:url('index/dowlog')}",{type:'dowsuccess',id:{$data.id}},function(m){
+
+                                          closeDiv();
+                                          if(m){
+      var Uhtml = '<p><a href="javascript:;" target="_blank" url="'+m+'" id="logurl"  onclick="downlog('+{$data.id}+',this.val)" >'+m+'</a></p>';
+      console.log(Uhtml);
+                                            $('#urlshow').html(Uhtml);
+                                          }
+                                             
+                               });
+
+
+                          //......后续操作
+                        },
+                        error : function() {
+                    //              alert('验证失败！');
+                        }
+                  
+                });
+
+
+
+                 function show()
+              {
+                if($("#urlshow").attr("val")==1){
+
+                    return false;
+                }
+
+               
+
+                 var Idiv=document.getElementById("Idiv"); 
+                 Idiv.style.display="block";
+                 //以下部分要将弹出层居中显示
+                 Idiv.style.left=(document.documentElement.clientWidth-Idiv.clientWidth)/2+document.documentElement.scrollLeft+"px";
+                     //alert(document.body.scrollTop)
+                     var aa_scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+                 Idiv.style.top=(document.documentElement.clientHeight-Idiv.clientHeight)/2+aa_scrollTop+"px";
+                     //此处出现问题，弹出层左右居中，但是高度却不居中，显示在上部分，导致一                      //部分不可见,于是暂时在下面添加margin-top
+
+
+                 //以下部分使整个页面至灰不可点击
+                     var procbg = document.createElement("div");  //首先创建一个div
+                 procbg.setAttribute("id","mybg");            //定义该div的id
+                 procbg.style.background ="#000000";
+                 procbg.style.width ="100%";
+                 procbg.style.height ="100%";
+                 procbg.style.position ="fixed";
+                 procbg.style.top ="0";
+                 procbg.style.left ="0";
+                 procbg.style.zIndex ="500";
+                 procbg.style.opacity ="0.6";
+                 procbg.style.filter ="Alpha(opacity=70)";
+                     //取消滚动条
+                 document.body.appendChild(procbg);
+                 document.body.style.overflow ="auto";   
+
+
+
+
+                 //以下部分实现弹出层的拖拽效果(如果想要弹出层内的div移动,把以下注销去掉即可)
+                     
+                     var posX;
+                 var posY;
+                 Idiv.onmousedown=function(e)
+                 {
+                     if(!e) e = window.event;  //IE
+                     posX = e.clientX - parseInt(Idiv.style.left);
+                     posY = e.clientY - parseInt(Idiv.style.top);
+                     document.onmousemove = mousemove;           
+                 }
+                 document.onmouseup =function()
+                 {
+                     document.onmousemove =null;
+                 }
+                 function mousemove(ev)
+                 {
+                    if(ev==null) ev = window.event;//IE
+                    Idiv.style.left = (ev.clientX - posX) +"px";
+                    Idiv.style.top = (ev.clientY - posY) +"px";
+                 }
+               
+             } 
+
+
+             function closeDiv()   //关闭弹出层
+             {
+                     
+                 var Idiv=document.getElementById("Idiv"); 
+                     var mybg = document.getElementById("mybg");
+                 document.body.removeChild(mybg);
+                 Idiv.style.display="none";
+                 document.body.style.overflow ="auto";//恢复页面滚动条
+                 //document.getElementById("mybg").style.display="none"; 
+             }
+
+  
+              </script>
+
+
+          <h2>
+            <span class="">作者简介</span>&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+          </h2>
+
+          <div class="indent ">
+        
+            <div class="">
+            
+              <div class="intro">
+                  
+                     {$data.author}
+              </div>
+
+            </div>
+
+          </div>
+        
+        </div>
+      </div>
+
+
+      <div class="aside">
+        
+        <div class="indent" id="collector">
+            <h2>老师介绍</h2>
+           
+<notempty name="teacher">
+                   <foreach name="teacher" item="vo">
+
+            <div class="">
+      
+
+      
+
+
+
+              <div class="ll">
+
+                <a href="{:url('index/teacher')}?id={$vo.id}">
+
+                 <notempty name="vo.img">
+                              
+                   <img src="__ROOT__/upload/{$vo.img}" class="pil" alt=" {$vo.teacher_name}" />
+
+
+                   <elseif condition="$vo.sex == 1"/>
+
+  <img src="__ROOT__/themes/gateway/portal/images/touxiang/nan.jpg" class="pil"  alt="{$vo.teacher_name}">
+
+                  <else/>
+  <img src="__ROOT__/themes/gateway/portal/images/touxiang/nv.jpg" class="pil" alt="{$vo.teacher_name}">
+                  </notempty>
+
+                </a>
+
+              </div>
+            
+              <div style="padding-left:60px">
+                <a class="" href="{:url('index/teacher')}?id={$vo.id}">{$vo.teacher_name}</a><br/>
+
+                <div class="pl ll">{$vo.teacher_name}</div> <br/>  
+              </div>
+              <div class="clear"></div><br/>
+              <div class="ul" style="margin-bottom:12px;"></div>
+        
+            </div>
+
+
+       </foreach>
+       </notempty>     
+        </div>
+        
+        
+        
+      
+        
+        
+        
+      </div>
+     
+    </div>
+    
+  </div>
+
+
+ <div id="footer">
+    
+<span id="icp" class="fleft gray-link">
+    &copy; 2005－2019 XXX.com, all rights reserved XXX科技有限公司
+</span>
+
+
+
+    <script src="js/init.js"
+      data-cfg-corelib="https://img3.doubanio.com/f/book/0495cb173e298c28593766009c7b0a953246c5b5/js/book/lib/jquery/jquery.js">
+    </script>
+  </div>
+
+  
+</div>
+      
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+ 
+  <style type="text/css">
+  *
+  {
+      padding:0px;
+      margin:0px;
+  }
+  #Idiv
+  {
+      width:600px;
+      height:auto;
+      position:absolute;
+      z-index:1000;
+      border:2px solid #ffffff;
+      background:#ffffff;
+  }
+  </style>
+  
+
+
+
+ 
+   
+  
+ 
+ <script langue="javascript">
+    var isclick= true;
+         function downlog(id){
+         
+            if(isclick){
+
+
+              isclick= false;
+
+        //下面添加需要执行的事件
+             var url = $("#logurl").attr("url")
+             
+
+              $.post("{:url('index/dowlog')}",{type:'inserlog',id:id,url:url},function(result){
+                $("span").html(result);
+              });
+
+              window.open(url);
+ 
+        //定时器
+        setTimeout(function(){ 
+            isclick = true;
+        }, 10000);
+    }else{
+
+        alert('您点击太快了，歇会')
+
+    }
+
+
+}
+ 
+ </script>
+
+
+ 
+
+
+
+ 
+
+<script>
+  contnone();
+  function contnone(){
+      var oP = document.getElementById('link-report');
+    var oBtn = document.getElementById('demoBtn');
+    var allContent = oP.innerHTML;                   //存放所有内容  3157666
+    var aleng = allContent.replace(/[^\u0000-\u00ff]/g,allContent).length;
+
+    oP.innerHTML = oP.innerHTML.substr(0,600);  //44179  3157666
+    var bleng = oP.innerHTML.replace(/[^\u0000-\u00ff]/g,oP.innerHTML).length;
+
+  if(bleng >= aleng){
+     
+      $('#demoBtn').hide();
+  }
+
+     //截取前100个字符
+    oBtn.onclick=function(){
+        oP.innerHTML = allContent;                    //显示所有内容
+        $('#demoBtn').hide();
+        $('#Btnsshow').show();
+
+    }
+
+  }
+
+  
+   $("#Btnsshow").click(function(){
+     contnone();
+      $('#demoBtn').show();
+        $('#Btnsshow').hide();
+});
+    
+</script>
+
+<style>
+    #urlshow a{
+        font-size:30px;
+
+    }
+
+    .show-hide{
+
+        margin-bottom: 22px;
+    }
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
