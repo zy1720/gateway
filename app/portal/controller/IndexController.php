@@ -12,6 +12,7 @@ namespace app\portal\controller;
 
 use cmf\controller\HomeBaseController;
 use think\Db;
+use think\db\Query;
 use think\Session;
 
 class IndexController extends HomeBaseController
@@ -603,6 +604,87 @@ if($data9){
         return $this->fetch(':content');
 
     }
+
+
+
+    public function Postfrom(){
+
+
+        $search_text = $this->request->param('search_text');
+
+        $error='';
+        if($search_text){
+            $content = Db::name('portal_post')
+                ->field('id,post_title,author_name')
+                ->where('delete_time', 0)
+                ->where(function (Query $query) use ($search_text) {
+                    if ($search_text) {
+                        $query->where('post_title', 'like', "%$search_text%");
+
+                        $query->whereOr('author_name', 'like', "%$search_text%");
+                    }
+                })
+                ->order("id DESC")
+                ->paginate(1);
+
+            $teach = Db::name('portal_teacher')
+                ->field('id,teacher_name')
+                ->where('delete_time', 0)
+                ->where(function (Query $query) use ($search_text) {
+                    if ($search_text) {
+                        $query->where('teacher_name', 'like', "%$search_text%");
+                    }
+                })
+                ->order("id DESC")
+                ->paginate(10);
+
+
+        }else{
+            $error = "<font color='red'>请输入您要查找的内容 </font>";
+            $this->assign('error', $error);
+            return $this->fetch(':search');
+        }
+
+
+        $cdata = array();
+        $tdata = array();
+            if($content->items()){
+                foreach($content->items() as $k=>$v){
+                    $cdata[$k]['cname'] = '书名：'.str_replace($search_text,"<font color='red'>".$search_text."</font>",$v['post_title']);
+                    $cdata[$k]['cid'] = $v['id'];
+                    $cdata[$k]['auname'] =  '作者：'.str_replace($search_text,"<font color='red'>".$search_text."</font>",$v['author_name']);
+
+
+                }
+            }
+
+            if($teach->items()){
+                foreach($teach->items() as $k=>$v){
+                    $tdata[$k]['tid'] = $v['id'];
+                    $tdata[$k]['tname'] =  '老师姓名：'.str_replace($search_text,"<font color='red'>".$search_text."</font>",$v['teacher_name']);
+
+
+
+                }
+            }
+
+
+        if(!$cdata && !$tdata){
+
+                $error = "<font color='red'>没有找到你要的结果 </font>";
+
+        }
+
+        $this->assign('page', $content->render());
+        $this->assign('error', $error);
+        $this->assign('data', $cdata);
+        $this->assign('tdata', $tdata);
+        return $this->fetch(':search');
+
+    }
+
+
+
 
 
     public function dowlog(){
