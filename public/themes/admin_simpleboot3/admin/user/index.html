@@ -4,7 +4,9 @@
 	<div class="wrap js-check-wrap">
 		<ul class="nav nav-tabs">
 			<li class="active"><a href="{:url('user/index')}">{:lang('ADMIN_USER_INDEX')}</a></li>
+			<if condition='$uid neq 2'>
 			<li><a href="{:url('user/add')}">{:lang('ADMIN_USER_ADD')}</a></li>
+			</if>
 		</ul>
         <form class="well form-inline margin-top-20" method="get" action="{:url('User/index')}">
             用户名:

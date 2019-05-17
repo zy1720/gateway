@@ -13,7 +13,7 @@ namespace app\admin\controller;
 use cmf\controller\AdminBaseController;
 use think\Db;
 use think\db\Query;
-
+use think\Session;
 /**
  * Class UserController
  * @package app\admin\controller
@@ -51,14 +51,16 @@ class UserController extends AdminBaseController
         if (!empty($content)) {
             return $content;
         }
+        $uid = Session::get('ADMIN_ID');
 
         /**搜索条件**/
         $userLogin = $this->request->param('user_login');
+
         $userEmail = trim($this->request->param('user_email'));
 
         $users = Db::name('user')
             ->where('user_type', 1)
-            ->where(function (Query $query) use ($userLogin, $userEmail) {
+            ->where(function (Query $query) use ($userLogin, $userEmail,$uid) {
                 if ($userLogin) {
                     $query->where('user_login', 'like', "%$userLogin%");
                 }
@@ -66,9 +68,16 @@ class UserController extends AdminBaseController
                 if ($userEmail) {
                     $query->where('user_email', 'like', "%$userEmail%");
                 }
+
+                if($uid==2){
+
+                        $query->where('id', 2);
+
+                }
             })
             ->order("id DESC")
             ->paginate(10);
+
         $users->appends(['user_login' => $userLogin, 'user_email' => $userEmail]);
         // 获取分页显示
         $page = $users->render();
@@ -79,6 +88,9 @@ class UserController extends AdminBaseController
             $roleId           = $r['id'];
             $roles["$roleId"] = $r;
         }
+
+
+        $this->assign("uid", $uid);
         $this->assign("page", $page);
         $this->assign("roles", $roles);
         $this->assign("users", $users);
