@@ -624,7 +624,8 @@ if($data9){
                         $query->whereOr('author_name', 'like', "%$search_text%");
                     }
                 })
-                ->order("id DESC");
+                ->order("id DESC")
+                ->paginate(100);
 
             $teach = Db::name('portal_teacher')
                 ->field('id,teacher_name')
@@ -634,7 +635,8 @@ if($data9){
                         $query->where('teacher_name', 'like', "%$search_text%");
                     }
                 })
-                ->order("id DESC");
+                ->order("id DESC")
+                ->paginate(100);
 
 
         }else{
