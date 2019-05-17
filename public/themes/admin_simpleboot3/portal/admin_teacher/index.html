@@ -126,7 +126,11 @@
                                target="_blank">{$vo.teacher_name}</a>
                         </notempty> -->
 
-                        {$vo.teacher_name}
+                      <a href="{:cmf_url('index/teacher',array('id'=>$vo['id']))}"
+                               target="_blank">{$vo.teacher_name}</a>
+
+
+
                     </td>
                     <td>
                        {$vo.iphone}

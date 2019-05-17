@@ -567,6 +567,8 @@ if($data9){
 
 
         $id = $this->request->param('id', 0, 'intval');
+        Db::name('portal_post')->where('id',$id)->setInc('post_hits');
+
         $data = Db::name('portal_post')->where('id', $id)->find();
 
         $teacher = Db::name('portal_teacher')->field('id,teacher_name,more,teacher_sex')->where('delete_time', 0)->limit(0,8)->select();
