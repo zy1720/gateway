@@ -102,6 +102,7 @@ class PublicController extends AdminBaseController
                     session('token', $token);
                 }
                 Db::name('user')->update($result);
+                Db::name('user')->where('id',$result["id"])->setInc('hoat');
                 cookie("admin_username", $name, 3600 * 24 * 30);
                 session("__LOGIN_BY_CMF_ADMIN_PW__", null);
                 $this->success(lang('LOGIN_SUCCESS'), url("admin/Index/index"));
